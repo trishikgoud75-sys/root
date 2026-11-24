@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Which Block is 34? – LPU Campus Navigation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f8;--surface:#fff;--ink:#0f2347;--muted:#52607a;--sign:#ffc933;--route:#1f9d6b;--line:#cfd8e6;--road:#dde4ef;--blk:#b9c6dc;
+--h:"Barlow Condensed","Arial Narrow",sans-serif;--b:"Source Sans 3",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1429;--surface:#13203d;--ink:#eaf0fb;--muted:#9fb0cf;--line:#2a3b61;--road:#1b2b4e;--blk:#34486f}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--b)}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{background:#0f2347;color:#fff}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px;gap:12px;flex-wrap:wrap}
+.top b{font:700 22px var(--h);letter-spacing:.02em}
+.top nav a{color:#cdd8ee;text-decoration:none;margin-left:18px;font-size:15px}
+.top nav a:hover,.top nav a:focus-visible{color:#fff;text-decoration:underline}
+.hero{background:#0f2347;color:#fff;padding:28px 0 56px}
+.board{display:flex;align-items:center;gap:18px;background:var(--sign);color:#0f2347;border-radius:6px;padding:14px 26px;width:fit-content;max-width:100%;box-shadow:0 0 0 4px #0f2347,0 0 0 6px var(--sign)}
+.board .n{font:700 clamp(56px,12vw,112px)/1 var(--h)}
+.board .l{font:600 clamp(20px,4vw,30px)/1.1 var(--h)}
+.hero h1{font:700 clamp(30px,5vw,48px)/1.1 var(--h);margin:30px 0 8px;max-width:20ch}
+.hero p{max-width:56ch;color:#cdd8ee;margin:0}
+section{padding:44px 0}
+h2{font:700 34px/1.1 var(--h);margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 22px;max-width:62ch}
+.finder{background:var(--surface);border:1px solid var(--line);border-radius:8px;margin-top:-34px;position:relative;padding:20px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-weight:600;font-size:14px;margin-bottom:4px}
+input,select,button{font:inherit;color:var(--ink)}
+input,select{width:100%;padding:12px;border:2px solid var(--line);border-radius:6px;background:var(--bg)}
+input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--sign);outline-offset:2px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chip{border:2px solid var(--line);background:transparent;border-radius:99px;padding:5px 14px;cursor:pointer}
+.chip[aria-pressed=true]{background:#0f2347;color:#fff;border-color:#0f2347}
+.grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px;margin-top:22px}
+.map{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px}
+.map svg{width:100%;height:auto;display:block}
+.map text{font:600 12px var(--b);fill:var(--ink)}
+.res{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px}
+.eta{display:flex;gap:22px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:12px}
+.eta strong{font:700 48px/1 var(--h);color:var(--route)}
+.eta span{color:var(--muted)}
+ol.steps{margin:0;padding-left:22px}ol.steps li{margin-bottom:10px}
+.lm{background:var(--bg);border-left:4px solid var(--sign);padding:10px 12px;margin-top:14px;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;text-align:left;cursor:pointer;width:100%}
+.card:hover{border-color:var(--ink)}
+.card h3{font:700 24px var(--h);margin:0}
+.card p{margin:4px 0 0;color:var(--muted);font-size:15px}
+.card .d{font-weight:600;color:var(--route)}
+.insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.ins{border-top:4px solid var(--sign);background:var(--surface);padding:14px 16px;border-radius:0 0 8px 8px}
+.ins h3{font:700 22px var(--h);margin:0 0 4px}.ins p{margin:0;color:var(--muted);font-size:15px}
+.tips{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:10px}
+.tips li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.tips small{color:var(--muted)}
+.tipform{display:grid;grid-template-columns:1fr auto;gap:10px}
+.btn{background:#0f2347;color:#fff;border:0;border-radius:6px;padding:12px 20px;cursor:pointer;font-weight:600}
+.chat{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;max-width:560px}
+.chat .m{padding:8px 12px;border-radius:8px;margin-bottom:8px;max-width:90%}
+.chat .u{background:#0f2347;color:#fff;margin-left:auto;width:fit-content}
+.chat .a{background:var(--bg)}
+footer{background:#0f2347;color:#cdd8ee;padding:26px 0;font-size:15px}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+@media(max-width:760px){.grid,.row{grid-template-columns:1fr}.top nav{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><b>Which Block is 34?</b>
+<nav><a href="#find">Find a block</a><a href="#blocks">All blocks</a><a href="#ask">Ask</a><a href="#tips">Peer tips</a><a href="#why">Research</a></nav></div></header>
+
+<div class="hero"><div class="wrap">
+<div class="board"><div class="n">34</div><div class="l">Block 34<br>this way</div></div>
+<h1>Search a block. Get the route. Get to class on time.</h1>
+<p>A campus navigation prototype for new LPU students who lose time hunting for Block 34 and other buildings.</p>
+</div></div>
+
+<main class="wrap">
+<div class="finder" id="find">
+<div class="row">
+<div><label for="to">Where do you want to go?</label><input id="to" list="places" value="Block 34" autocomplete="off" placeholder="Try “Block 34”"><datalist id="places"></datalist></div>
+<div><label for="from">Where are you now?</label><select id="from"></select></div>
+</div>
+<div class="chips" id="chips" role="group" aria-label="Quick destinations"></div>
+</div>
+
+<div class="grid">
+<div class="map"><svg id="map" viewBox="0 0 600 380" role="img" aria-label="Schematic campus map with the route highlighted"></svg></div>
+<div class="res" aria-live="polite" id="res"></div>
+</div>
+<p class="note">Prototype: locations, landmarks and times are sample data for demonstration, not the real LPU layout.</p>
+
+<section id="blocks"><h2>All blocks and landmarks</h2>
+<p class="sub">Each block with a landmark you can spot and its distance from where you are. Tap one to get directions.</p>
+<div class="cards" id="cards"></div></section>
+
+<section id="ask"><h2>Ask the assistant</h2>
+<p class="sub">Type a question such as “Which block is 34?” or “How do I reach the Library?”</p>
+<div class="chat"><div id="log"><div class="m a">Hi! Ask me where a block is and I’ll show the route.</div></div>
+<div class="tipform"><input id="q" placeholder="Which block is 34?" aria-label="Your question"><button class="btn" id="send">Ask</button></div></div></section>
+
+<section id="tips"><h2>Peer tips</h2>
+<p class="sub">Shortcuts and landmarks from students who made the walk before you.</p>
+<ul class="tips" id="tiplist"></ul>
+<form class="tipform" id="tipform"><input id="tipin" placeholder="Share a tip, e.g. Quickest way to Block 34 from Boys’ Hostel" aria-label="Your tip"><button class="btn">Add tip</button></form></section>
+
+<section id="why"><h2>What the research told us</h2>
+<p class="sub">Built from our survey synthesis, journey map and persona (The New Explorer, a first-year B.Tech student).</p>
+<div class="insights">
+<div class="ins"><h3>Wayfinding confusion</h3><p>Blocks look alike and the layout is large, so new students ask many people for directions.</p></div>
+<div class="ins"><h3>Signage gaps</h3><p>Signs are unclear or inconsistently placed, and there is no central map at key points.</p></div>
+<div class="ins"><h3>Digital need</h3><p>Students want search, real-time directions, landmarks and an estimated time.</p></div>
+<div class="ins"><h3>Real impact</h3><p>The confusion causes frustration and lost time, and sometimes late arrival.</p></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">INT335 Design Thinking, Group 13. Ketan Rana, Aditya Roy, Abhi Kapoor, Sreenanda.<br>Chosen concept: searchable campus map with real-time wayfinding, walking time and landmarks.</div></footer>
+
+<script>
+var P=[
+{id:"gate",n:"Main Gate",x:60,y:330,lm:"the security cabin and flagpole",t:"entry"},
+{id:"boys",n:"Boys’ Hostel",x:70,y:70,lm:"the hostel mess and cycle stand",t:"hostel"},
+{id:"girls",n:"Girls’ Hostel",x:170,y:330,lm:"the green gate and guard room",t:"hostel"},
+{id:"lib",n:"Library",x:300,y:80,lm:"the glass front and fountain",t:"service"},
+{id:"food",n:"Food Court",x:300,y:200,lm:"the open seating and juice stall",t:"service"},
+{id:"b13",n:"Block 13",x:180,y:200,lm:"the red brick stairwell",t:"block"},
+{id:"b32",n:"Block 32",x:470,y:90,lm:"the rooftop water tank",t:"block"},
+{id:"b34",n:"Block 34",x:520,y:250,lm:"the blue signboard beside the parking lot",t:"block"},
+{id:"b38",n:"Block 38",x:420,y:330,lm:"the sports ground gate",t:"block"}];
+var M=1.6,SPEED=75;
+function $(i){return document.getElementById(i)}
+function by(id){return P.filter(function(p){return p.id===id})[0]}
+function find(s){s=s.trim().toLowerCase();if(/^\d+$/.test(s))s="block "+s;return P.filter(function(p){return p.n.toLowerCase()===s})[0]||P.filter(function(p){return p.n.toLowerCase().indexOf(s)>-1})[0]}
+function path(a,b){return [[a.x,a.y],[b.x,a.y],[b.x,b.y]]}
+function dist(a,b){return (Math.abs(a.x-b.x)+Math.abs(a.y-b.y))*M}
+var from="gate",to="b34";
+function draw(){
+ var a=by(from),b=by(to),pts=path(a,b),s='<rect width="600" height="380" fill="var(--bg)" rx="6"/>';
+ s+='<g stroke="var(--road)" stroke-width="16" stroke-linecap="round" fill="none"><path d="M60 330H520M60 70V330M60 200H520M300 80V330M520 90V330M60 90H470"/></g>';
+ P.forEach(function(p){var big=p.t==="block";
+  s+='<rect x="'+(p.x-26)+'" y="'+(p.y-16)+'" width="52" height="32" rx="4" fill="'+(p.id===to?"var(--sign)":"var(--blk)")+'" stroke="'+(p.id===to?"#0f2347":"none")+'" stroke-width="2"/>';
+  s+='<text x="'+p.x+'" y="'+(p.y+30)+'" text-anchor="middle">'+p.n+'</text>';
+  s+='<text x="'+p.x+'" y="'+(p.y+4)+'" text-anchor="middle" style="fill:#0f2347;font-size:11px">'+(big?p.n.replace("Block ",""):p.t==="hostel"?"H":p.t==="entry"?"G":"•")+'</text>'});
+ if(a!==b){s+='<polyline points="'+pts.map(function(q){return q.join(",")}).join(" ")+'" fill="none" stroke="var(--route)" stroke-width="6" stroke-dasharray="2 10" stroke-linecap="round" stroke-linejoin="round"/>';
+  s+='<circle cx="'+a.x+'" cy="'+a.y+'" r="8" fill="var(--route)" stroke="#fff" stroke-width="3"/>'}
+ $("map").innerHTML=s}
+function dir(dx,dy){return dy?(dy<0?"north":"south"):(dx<0?"west":"east")}
+function show(){
+ var a=by(from),b=by(to),r=$("res");
+ if(a===b){r.innerHTML="<h2>You’re here</h2><p>Pick a different starting point to see a route.</p>";draw();return}
+ var d1=Math.abs(b.x-a.x)*M,d2=Math.abs(b.y-a.y)*M,tot=d1+d2,min=Math.max(1,Math.round(tot/SPEED));
+ var st=["Start at <b>"+a.n+"</b> near "+a.lm+"."];
+ if(d1>0)st.push("Walk <b>"+dir(b.x-a.x,0)+"</b> for about "+Math.round(d1)+" m along the main road.");
+ if(d2>0)st.push("Turn and walk <b>"+dir(0,b.y-a.y)+"</b> for about "+Math.round(d2)+" m.");
+ st.push("You’ve arrived at <b>"+b.n+"</b>.");
+ r.innerHTML='<h2>To '+b.n+'</h2><div class="eta"><strong>'+min+' min</strong><span>'+Math.round(tot)+' m on foot</span></div><ol class="steps">'+st.map(function(x){return "<li>"+x+"</li>"}).join("")+'</ol><div class="lm"><b>Look for:</b> '+b.lm+'.</div>';
+ $("to").value=b.n;draw();chips();cards()}
+function chips(){
+ var h="";["b34","lib","food","b13","b38"].forEach(function(i){h+='<button class="chip" data-id="'+i+'" aria-pressed="'+(i===to)+'">'+by(i).n+'</button>'});
+ $("chips").innerHTML=h}
+function cards(){
+ var a=by(from);
+ $("cards").innerHTML=P.filter(function(p){return p.id!==from}).map(function(p){
+  return '<button class="card" data-id="'+p.id+'"><h3>'+p.n+'</h3><p>Look for '+p.lm+'.</p><p class="d">'+Math.round(dist(a,p))+' m · '+Math.max(1,Math.round(dist(a,p)/SPEED))+' min</p></button>'}).join("")}
+function go(id){to=id;show();$("find").scrollIntoView({behavior:"smooth",block:"center"})}
+$("from").innerHTML=P.map(function(p){return '<option value="'+p.id+'">'+p.n+'</option>'}).join("");
+$("places").innerHTML=P.map(function(p){return '<option value="'+p.n+'">'}).join("");
+$("from").onchange=function(){from=this.value;show()};
+$("to").oninput=function(){var p=find(this.value);if(p&&p.id!==to){to=p.id;show()}};
+$("chips").onclick=function(e){var i=e.target.getAttribute("data-id");if(i){to=i;show()}};
+$("cards").onclick=function(e){var c=e.target.closest(".card");if(c)go(c.getAttribute("data-id"))};
+function ask(){
+ var q=$("q").value.trim();if(!q)return;
+ var p=find((q.match(/block\s*\d+|library|food court|gate|hostel/i)||[""])[0])||(q.match(/\b\d+\b/)?find(q.match(/\b\d+\b/)[0]):null),log=$("log");
+ log.insertAdjacentHTML("beforeend",'<div class="m u"></div>');log.lastChild.textContent=q;
+ var ans=p?p.n+" is near "+p.lm+". From "+by(from).n+" it’s about "+Math.max(1,Math.round(dist(by(from),p)/SPEED))+" min on foot. I’ve updated the map above.":"I couldn’t find that place. Try a block number like “Block 34”, or “Library”.";
+ log.insertAdjacentHTML("beforeend",'<div class="m a"></div>');log.lastChild.textContent=ans;
+ if(p){to=p.id;show()}$("q").value=""}
+$("send").onclick=ask;$("q").onkeydown=function(e){if(e.key==="Enter")ask()};
+var tips=[["Quickest way to Block 34 from Boys’ Hostel: cut through the Food Court, then follow the road east.","Second-year student"],["Block 34 is next to the parking lot. Look for the blue signboard, not the block number.","Third-year student"],["During peak hours leave 10 minutes early. The main road gets crowded near the Library.","Senior"]];
+function tl(){$("tiplist").innerHTML=tips.map(function(t){return "<li>"+t[0].replace(/</g,"&lt;")+"<br><small>"+t[1]+"</small></li>"}).join("")}
+$("tipform").onsubmit=function(e){e.preventDefault();var v=$("tipin").value.trim();if(v){tips.unshift([v,"You"]);$("tipin").value="";tl()}};
+tl();show();
+</script>
+</body>
+</html>
